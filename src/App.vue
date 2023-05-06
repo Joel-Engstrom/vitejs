@@ -1,22 +1,34 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue';
-import Navbar from './components/Navbar.vue';
+import MyButtons from "./components/MyButtons.vue";
+import Counter from "./components/Counter.vue";
+import RadioButtons from "./components/RadioButtons.vue";
+import Title from "./components/Title.vue";
 </script>
 
 <template>
-  <Navbar />
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+  <div class="container">
+    <Title />
+    <MyButtons />
+    <va-chip shadow> chip with shadow </va-chip>
+    <Counter />
+    <RadioButtons />
   </div>
-  <HelloWorld msg="Vite + Vue" />
 </template>
 
 <style scoped>
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  background-color: #181123;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
